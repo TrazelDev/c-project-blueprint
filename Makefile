@@ -22,7 +22,8 @@ run: build
 build: $(TARGET)
 clean:
 	rm -rf $(BINS_DIR)/
-
+tidy:
+	clang-tidy $(SRCS)
 
 $(TARGET): $(OBJS) $(HEADERS)
 	$(CC) -o $@ $(OBJS)
